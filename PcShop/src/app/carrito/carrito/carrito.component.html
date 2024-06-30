@@ -1,0 +1,39 @@
+<div class="carrito-main">
+  <div>
+    @for (producto of _productos; track producto.id; ) {
+    @if (_productos.length > 0 ) {
+    <ng-container class="ng-container-producto">
+      <div class="producto">
+        <div>
+          <img [src]="producto.image" alt="IMAGEN DE PRODUCTO">
+        </div>
+        <div class="info">
+          <div>
+            <h2><span>Titulo:</span> {{producto.title}}</h2>
+          </div>
+          <div>
+            <h2><span>Precio:</span> ${{producto.price}}</h2>
+          </div>
+          <div>
+            <h2><span>Cantidad:</span> {{producto.rating.count}}</h2>
+          </div>
+        </div>
+      </div>
+
+    </ng-container>
+    }
+    }@empty {
+    <span>
+      <h1>NO HAY ELEMENTOS </h1>
+    </span>
+    }
+  </div>
+
+
+  <div class="subtotal">
+    <h2> Precio total: {{precioTotal}}</h2>    
+    <input type="submit" value="Finalizar" (click)="finalizarCompra()">
+  </div>
+
+</div>
+<router-outlet></router-outlet>

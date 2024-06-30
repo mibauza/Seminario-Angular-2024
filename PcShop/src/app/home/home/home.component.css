@@ -1,0 +1,12 @@
+.mat-tab-group{
+    background-image: "./assets/shubham-dhage-NsPqV-WsZYY-unsplash.jpg";
+}
+
+.mat-tab-producto{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title{
+    justify-content: center;
+}

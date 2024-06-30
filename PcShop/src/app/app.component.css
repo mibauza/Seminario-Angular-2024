@@ -1,0 +1,22 @@
+.mat-toolbar{
+    justify-content:space-between;
+    padding: 50px;
+}
+
+span{
+    padding-right: 1rem;
+}
+
+
+.main-container{
+    display: flex;   
+    flex-direction: row;
+    min-height: 100rem;    
+}
+
+.main{
+    width: 60rem;
+}
+
+
+

@@ -1,0 +1,50 @@
+.carrito-main{
+    display: flex;
+    flex-direction: row;   
+    justify-content: space-around; 
+}
+
+
+.producto{    
+    padding: 25px;    
+    margin: 25px auto ;
+    border-radius: 10px;
+    border-color:blueviolet;
+    border-style: solid;    
+    min-height: 150px;  
+    display: flex;  
+    flex-direction: row;
+}
+.subtotal{
+    padding: 50px;    
+    margin: 25px auto ;
+    border-radius: 10px;
+    border-color:blueviolet;
+    border-style: solid;    
+    height: fit-content;
+        
+    
+}
+.info{
+ display: flex;
+ flex-direction: column;
+ 
+}
+
+span{
+    color: blueviolet;
+
+}
+
+img{
+    width: 100px;    
+    margin-right: 15px;
+}
+
+.producto-destacado{
+    background-color: aquamarine;
+}
+
+.btn-cantidad, #cantidad{
+    width: 35px;    
+}

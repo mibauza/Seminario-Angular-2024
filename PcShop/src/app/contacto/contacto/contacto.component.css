@@ -1,0 +1,30 @@
+.form-contact{
+  display: flex;
+  justify-content:center;
+}
+.example-container {
+    display: flex;
+    flex-direction: column;  
+    
+  }
+
+  input,label,textarea{
+    
+    border-color:#6495ED;    
+    outline: 0 none;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+    font-size: 25px;
+    font-weight:400;   
+  }
+  
+  mat-form-field.mat-form-field {
+    min-width: 25rem;
+  }
+
+  .example-container > * {
+    width: 100%;
+  }
+
+  
