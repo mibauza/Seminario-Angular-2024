@@ -17,3 +17,6 @@ app-producto-list{
     
 }
 
+.mat-mdc-tab .mdc-tab__text-label {
+    --mat-tab-header-inactive-label-text-color: #7b1fa2;    
+}

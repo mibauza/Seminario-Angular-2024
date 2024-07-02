@@ -17,10 +17,10 @@
       </div>
       <div>
         <input type="button" class="btn-cantidad" value="-" (click)="restar(producto)">
-        <input type="button" class="btn-cantidad" value="+" (click)="sumar($event,producto)">
-        <!--<input type="text" name="cantidad" id="cantidad" 
-        (keyup)="cambiarValor($event, producto)" >
-        [(ngModel)]="producto.rating.count">-->
+        <input type="button" class="btn-cantidad" value="+" (click)="sumar(producto)">
+        <input type="text" name="cantidad" id="cantidad" 
+        (keyup)="cambiarValor($event, producto)" 
+        [(ngModel)]="producto.rating.count">
         <input type="button" value="comprar" (click)="agregarProducto(producto)">
       </div>
     </div>

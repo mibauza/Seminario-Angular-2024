@@ -52,16 +52,14 @@ export class ProductoListComponent implements OnInit {
   }
 
   
-  sumar(event:any, producto: productoModel) { 
-    
-    if (event.target.value < producto.rating.count) {
-      producto.rating.count++;                  
-    }  
+  sumar(producto: productoModel) {    
+   
+      producto.rating.count++;     
     
   }
 
   
-/*cambiarValor(event: any, producto: productoModel) {
+cambiarValor(event: any, producto: productoModel) {
     let valor = event.target.value;
     console.log (event.target.value);
     if (valor < 1) {
@@ -71,7 +69,7 @@ export class ProductoListComponent implements OnInit {
     } else {
       producto.rating.count = parseInt(valor, 10);
     }
-  }*/
+  }
 
   agregarProducto(producto:productoModel){
     console.log("agregarProducto producto-list");
