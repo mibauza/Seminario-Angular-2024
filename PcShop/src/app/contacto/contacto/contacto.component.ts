@@ -1,10 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { NgModule } from '@angular/core';
+import { CommonModule, NgIf } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+// Angular Material
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
+
+
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contacto.component.html',
-  styleUrls: ['./contacto.component.css']
+  styleUrls: ['./contacto.component.css'],
+  standalone: true,
+  imports: [
+    NgIf,
+    CommonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
+  ]
 })
+
 export class ContactFormComponent implements OnInit {
 
   contactForm!: FormGroup;
@@ -23,7 +44,7 @@ export class ContactFormComponent implements OnInit {
   onSubmit() {
     if (this.contactForm.valid) {
       console.log('Formulario enviado:', this.contactForm.value);
-      // Aquí iría la lógica para enviar los datos, p.ej. POST o PUT
+      this.contactForm.reset();
     } else {
       this.contactForm.markAllAsTouched();
     }
