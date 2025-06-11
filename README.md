@@ -10,5 +10,5 @@ Sede: Quequen
 https://github.com/mibauza/Seminario-Angular-2024
 https://stackblitz.com/~/github.com/mibauza/Seminario-Angular-2024
 
-En cuanto a la tematica es una pagina de productos en general.
+Tematica: Compra de productos en general
 
