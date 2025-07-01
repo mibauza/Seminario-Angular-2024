@@ -1,17 +1,37 @@
 
-<div class="form-contact">
+<form Class="form-contact" [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-contact">
 
+  <div class="example-container">
 
-<div class="example-container">  
-    <mat-form-field class="mat-form-field">      
-      <input matInput placeholder="Nombre">
-      <input matInput placeholder="Apellido">
-      <input matInput placeholder="Telefono">
+    <mat-form-field class="mat-form-field" appearance="fill">
+      <input matInput placeholder="Nombre" formControlName="nombre" />
+      <mat-error *ngIf="contactForm.get('nombre')?.hasError('required') && contactForm.get('nombre')?.touched">
+        El nombre es requerido
+      </mat-error>
     </mat-form-field>
-  
-    <mat-form-field>
-      <textarea matInput placeholder="Comentario"></textarea>
-    </mat-form-field>  
-    
+
+    <mat-form-field class="mat-form-field" appearance="fill">
+      <input matInput placeholder="Apellido" formControlName="apellido" />
+      <mat-error *ngIf="contactForm.get('apellido')?.hasError('required') && contactForm.get('apellido')?.touched">
+        El apellido es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="mat-form-field" appearance="fill">
+      <input matInput placeholder="Teléfono" formControlName="telefono" />
+      <mat-error *ngIf="contactForm.get('telefono')?.hasError('required') && contactForm.get('telefono')?.touched">
+        El teléfono es requerido
+      </mat-error>
+      <mat-error *ngIf="contactForm.get('telefono')?.hasError('pattern') && contactForm.get('telefono')?.touched">
+        El teléfono debe tener 10 dígitos
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <textarea matInput placeholder="Comentario" formControlName="comentario"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Enviar</button>
+
   </div>
-</div>
+</form>
