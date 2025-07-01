@@ -1,6 +1,7 @@
 export interface productoModel {
     id: number,
     title: string,
+    contador: number,
     price: number,
     description: string,
     category: string,
